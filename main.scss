@@ -1,0 +1,154 @@
+// Color Variables
+$border-color: black;
+$header-bg-color: #f47e5e;
+$body-bg-color: #fef8de;
+$container-md-bg-color: peachpuff;
+$container-sm-bg-color: #f47e5e;
+
+// Dark Theme
+$dark-border-color: white;
+$dark-header-bg-color: #313131;
+$dark-body-bg-color: #131313;
+$dark-container-md-bg-color: #272d32;
+$dark-container-sm-bg-color: #3b124f;
+
+.body-color {
+    background-color: $body-bg-color;
+}
+
+header {
+    border: 3px solid $border-color;
+    gap: 2px;
+    text-align: center;
+    background-color: $header-bg-color;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border: 2px solid $border-color;
+}
+
+.container-md {
+    background-color: $container-md-bg-color;
+    margin-top: 15px;
+    border: 3px solid $border-color;
+    height: 600px;
+}
+
+.container-sm {
+    background-color: $container-sm-bg-color;
+    margin-top: 15px;
+    border: 3px solid $border-color;
+    height: 600px;
+}
+
+@media screen and (max-width: 699px) {
+    .container {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    .container-md {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 80%;
+        text-align: center;
+    }
+
+    .container-sm {
+        width: 80%;
+        display: flex;
+        justify-content:space-around;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        
+        .center {
+        display: block;
+        width: 100%;
+    }
+    }
+    
+    }
+
+    
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-items: center;
+
+    .container-md {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 25%;
+    }
+
+    .container-sm {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 20%;
+    }  
+    .center {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+}
+
+
+// Dark Theme Styles
+.dark-theme {
+
+    header {
+        border-color: $dark-border-color;
+        background-color: $dark-header-bg-color;
+        color: $dark-border-color;
+    }
+    
+    &.body-color {
+        background-color: $dark-body-bg-color;
+    }
+
+    .container-md {
+        background-color: $dark-container-md-bg-color;
+        border-color: $dark-border-color;
+        color: $dark-border-color;
+    }
+
+    .container-sm {
+        background-color: $dark-container-sm-bg-color;
+        border-color: $dark-border-color;
+        color: $dark-border-color;
+    }
+
+    footer {
+        border-color: $dark-border-color;
+        color: $dark-border-color;
+    }
+}

@@ -1,0 +1,121 @@
+.body-color {
+  background-color: #fef8de;
+}
+
+header {
+  border: 3px solid black;
+  gap: 2px;
+  text-align: center;
+  background-color: #f47e5e;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border: 2px solid black;
+}
+
+.container-md {
+  background-color: peachpuff;
+  margin-top: 15px;
+  border: 3px solid black;
+  height: 600px;
+}
+
+.container-sm {
+  background-color: #f47e5e;
+  margin-top: 15px;
+  border: 3px solid black;
+  height: 600px;
+}
+
+@media screen and (max-width: 699px) {
+  .container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .container-md {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 80%;
+    text-align: center;
+  }
+  .container .container-sm {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+  .container .container-sm .center {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .container .container-md {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 25%;
+  }
+  .container .container-sm {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 20%;
+  }
+  .container .center {
+    display: block;
+    width: 100%;
+  }
+}
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.dark-theme header {
+  border-color: white;
+  background-color: #313131;
+  color: white;
+}
+.dark-theme.body-color {
+  background-color: #131313;
+}
+.dark-theme .container-md {
+  background-color: #272d32;
+  border-color: white;
+  color: white;
+}
+.dark-theme .container-sm {
+  background-color: #3b124f;
+  border-color: white;
+  color: white;
+}
+.dark-theme footer {
+  border-color: white;
+  color: white;
+}/*# sourceMappingURL=main.css.map */
